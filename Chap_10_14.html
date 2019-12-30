@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 10 t 14</title>
+</head>
+<body>
+    
+</body>
+<script>
+let firstNum = +prompt("Enter first num",0)
+let secondNum = +prompt("Enter second num",0)
+let operator = prompt("Enter operator +,-,*,/,%")
+let result;
+if(operator === "+"){
+  result = firstNum + secondNum;
+  alert(result)
+}
+else if(operator === "-"){
+    result = firstNum - secondNum;
+    alert(result)
+}
+else if(operator === "*"){
+    result = firstNum * secondNum;
+    alert(result)
+}
+else if(operator === "/"){
+    result = firstNum / secondNum;
+    alert(result)
+}
+else if(operator === "%"){
+    result = firstNum % secondNum;
+    alert(result)
+}
+else{
+    alert("undefined operator please defined a valid operator")
+}
+</script>
+</html>

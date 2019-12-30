@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 35 to 38</title>
+</head>
+<body>
+    
+</body>
+<script>
+function add(a,b){
+  let z = a + b;
+  return z;
+}
+function multiply(a,b,c){
+  var y =  a * add(b,c);
+  return y
+}
+let val = multiply(3,5,6);
+console.log(val)
+
+function factorial(num){
+    if(num === 0){
+        return 1
+    }
+    else {
+        return num * factorial(num - 1)
+    }
+}
+console.log(factorial(5))    
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 18_19_20</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let courses = [];
+
+for(let i = 0; i < 5; i++){
+let course = prompt(`Please enter your ${1+i} course name`);
+if(!course || course === null){
+  alert("you did not assign course so we assign default course")
+  course = "HTML";
+  courses.push(course)
+
+}
+else{
+    courses.push(course)
+}
+}
+alert(courses)
+for(let j = 0; j < courses.length; j++){
+
+let againCourse = prompt(`Please reassign your ${1+j} course name`,courses[j]);
+if(againCourse === courses[j]){
+  alert(`your default course is ${courses[j]}`)
+}
+else if(againCourse === null){
+    courses[j] = courses[j]
+}
+else{
+    courses[j] = againCourse
+}
+}
+alert(courses)
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap_15_16_17</title>
+</head>
+<body>
+    
+</body>
+<script>
+let courses = [];
+let course1 = prompt("Enter your 1st Course name");
+let course2 = prompt("Enter your 2nd Course name");
+let course3 = prompt("Enter your 3rd Course name");
+let course4 = prompt("Enter your 4th Course name");
+let course5 = prompt("Enter your 5th Course name");
+
+if(!course1 || course1 === null){   
+ course1 = "HTML";
+ alert(`you did not give course 1 name so we assign default course ${course1}`)
+}
+else if(!course2 || course2 === null){
+    course2 = "CSS"
+    alert(`you did not give course 2 name so we assign default course ${course2}`)
+
+}
+else if(!course3 || course3 === null){
+    course3 = "Docker"
+    alert(`you did not give course 3 name so we assign default course ${course3}`)
+
+}
+else if(!course4 || course4 === null){
+    course4 = "Linux"
+    alert(`you did not give course 4 name so we assign default course ${course4}`)
+
+}
+else if(!course5 || course5 === null){
+    course3 = "K8"
+    alert(`you did not give course 5 name so we assign default course ${course5}`)
+
+}
+courses.push(course1,course2,course3,course4,course5);
+alert(courses)
+
+course1 = prompt("Enter your 1st Course name again", course1)
+course2 = prompt("Enter your 2nd Course name again", course2);
+course3 = prompt("Enter your 3rd Course name again", course3);
+course4 = prompt("Enter your 4th Course name again", course4);
+course5 = prompt("Enter your 5th Course name again", courses5);
+
+courses.splice(0,1,course1)
+courses.splice(1,1,course2)
+courses.splice(2,1,course3)
+courses.splice(3,1,course4)
+courses.splice(4,1,course5)
+alert(courses)
+
+
+</script>
+</html>

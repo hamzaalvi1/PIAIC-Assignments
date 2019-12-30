@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 21_30 (2)</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let userInp = prompt("Enter some text");
+let words = userInp.split(" ");
+let reformateWord = []
+for(let i = 0; i < words.length; i++){
+  
+  let firstChar = words[i].charAt(0);
+  let othersChar = words[i].slice(1);
+  firstChar =  firstChar.toUpperCase()
+  othersChar = othersChar.toLowerCase()  
+  let _newWord = `${firstChar}${othersChar}`
+  reformateWord.push(_newWord) 
+  console.log(reformateWord)
+}
+let _word = reformateWord.join(" ")
+console.log(_word)
+
+
+
+</script>
+</html>

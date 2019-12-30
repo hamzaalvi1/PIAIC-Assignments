@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 31 to 34</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let userName = prompt('Enter your name')
+let date = prompt('Enter your DOB date')
+let month = prompt('Enter your DOB month');
+let year = prompt("Enter your DOB year");
+let monthInYear  = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+
+
+let now = new Date();
+let currentHours = now.getHours();
+if(currentHours >= 0 && currentHours <= 5){
+    console.log(`Hey ${userName} it's midnight`)
+}
+else if(currentHours >= 6 && currentHours <= 11){
+    console.log(`Good Morning ${userName}! have a nice day`)
+    
+}
+else if(currentHours >= 12 && currentHours <= 17){
+    console.log(`Good Afternoon ${userName}! have a nice day`)
+    
+}
+else if(currentHours >= 18 && currentHours <= 21){
+    console.log(`Good Evening ${userName}!`)
+    
+}
+else{
+    console.log(`Good Night ${userName}`)
+}
+let _DOB = new Date(`${monthInYear[month]} ${date}, ${year}`)
+console.log(_DOB)
+let oneDay = 1000 * 60 * 60 * 24
+let daysInHour = 1000 * 60 * 60;
+let daysInSecond = 1000 * 60
+
+
+let msDiff = now.getTime() - _DOB.getTime();
+let getDay = Math.floor(msDiff / oneDay);
+let dob_Year = (now.getFullYear() - _DOB.getFullYear())
+let dob_Month = (now.getMonth() - _DOB.getMonth())
+let dob_Day = (Math.abs(now.getDay() - _DOB.getDay()))
+let dob_Hours = (now.getHours() - _DOB.getHours())
+let dob_Second = (now.getSeconds() - _DOB.getSeconds())
+
+console.log(`${userName} you are ${dob_Year} years ${dob_Month} months ${dob_Day} days and ${dob_Hours} hours ${dob_Second} seconds old`)
+console.log(`${userName} you are ${getDay} days old`)
+
+let commingBday = new Date("July 15, 2020 11:59");
+let daysLeft = Math.floor((commingBday.getTime() - now.getTime()) / oneDay);
+let hoursLeft = Math.abs((commingBday.getHours() - now.getHours()) / daysInHour);
+let secondsLeft = Math.abs((commingBday.getSeconds() - now.getSeconds()) / daysInSecond);
+
+console.log(`${userName} your comming bday remains ${daysLeft} days ${Math.round(hoursLeft)} hours and ${Math.round(secondsLeft)} seconds left`)
+
+
+
+</script>
+</html>

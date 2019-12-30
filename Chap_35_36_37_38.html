@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 35 36 37 38</title>
+</head>
+<body>
+    
+
+</body>
+<script>
+
+let userInp = prompt("Enter some text");
+let words = userInp.split(" ")
+let reformatedWords = [];
+
+function capitalizeCase(inp){
+for(let i = 0; i < inp.length; i++ ){
+    let firstChar = inp[i].charAt(0)
+    let otherChar = inp[i].slice(1);
+  
+    firstChar = firstChar.toUpperCase();
+    otherChar = otherChar.toLowerCase();
+    let _newWord = `${firstChar}${otherChar}`;
+    reformatedWords.push(_newWord)
+}
+
+}
+capitalizeCase(words)
+let _word = reformatedWords.join(" ");
+console.log(_word)
+
+
+</script>
+
+</html>

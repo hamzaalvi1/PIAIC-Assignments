@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chap 39_42</title>
+</head>
+<body>
+    
+</body>
+<script>
+let i = 0;
+let marksList = []
+while(i < 5){
+
+let course = +prompt(`Enter your ${i+1} course marks`)
+marksList.push(course);
+i++
+}
+
+let obtainedMarks = marksList.reduce((acc,arr)=> acc + arr)
+let percentage = (obtainedMarks / 500) * 100
+console.log(percentage)
+let result
+
+switch(true){
+    case (percentage <= 100 && percentage >= 80):
+    result = `congratz you got ${percentage}% and your grade is A+ keep it up`
+    break;
+    case (percentage <= 79 && percentage >= 69):
+    result = (`you got ${percentage}% and your grade is A great`);
+    break;
+    case (percentage <= 68 && percentage >= 59):
+    result = (`you got ${percentage}% and your grade is B you can work harder`);
+    break;
+    case (percentage <= 58 && percentage >= 49):
+    result = (`you got ${percentage}% and your grade is C Work hard!`);
+    break;
+    case (percentage <= 48 && percentage >= 0):
+    result = (`Failed!`);
+    break;
+    default : 
+    result = ("Invalid Percentage")
+    
+}
+alert(result)
+
+
+
+</script>
+</html>
